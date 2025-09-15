@@ -34,24 +34,24 @@ class View():
         self.login.columnconfigure([0, 2], weight=1)
         self.login.columnconfigure(1, weight=3)
         
-        self.login.rowconfigure(0, weight=3)
+        self.login.rowconfigure(0, weight=2)
         self.login.rowconfigure([1, 2, 3, 4, 5], weight=1)
         self.login.rowconfigure(5, weight=2)
         
         #!__________________________Tela_de_Login__________________________
         titulo = ctk.CTkLabel(self.login,
                               text="Tela de Login",
-                              font=(fonte, 50))
+                              font=(fonte, 70))
         
         userLabel = ctk.CTkLabel(self.login,
                                  text="Insira seu usuário",
-                                 font=(fonte, 20))
+                                 font=(fonte, 40))
         userInput = ctk.CTkEntry(self.login,
                                  width=500,
                                  font=(fonte, 20))
         senhaLabel = ctk.CTkLabel(self.login,
                                   text="Insira sua senha",
-                                  font=(fonte, 20))
+                                  font=(fonte, 40))
         senhaInput = ctk.CTkEntry(self.login,
                                   width=500,
                                   font=(fonte, 20))
@@ -59,13 +59,22 @@ class View():
         botoesFrame = ctk.CTkFrame(self.login)
         limpar = ctk.CTkButton(botoesFrame,
                                text="Limpar",
-                               font=(fonte, 15),
+                               font=(fonte, 20),
+                               height=50,
+                               border_width=15,
                                command=lambda: self.limpar(userInput,
                                                            senhaInput))
         salvar = ctk.CTkButton(botoesFrame,
                                text="Salvar",
-                               font=(fonte, 15),
+                               font=(fonte, 20),
+                               height=50,
                                command=lambda: self.salvar(userInput,
+                                                           senhaInput))
+        entrar = ctk.CTkButton(botoesFrame,
+                               text="Entrar",
+                               font=(fonte, 20),
+                               height=50,
+                               command=lambda: self.entrar(userInput,
                                                            senhaInput))
         
         titulo.grid(row=0,
@@ -87,6 +96,7 @@ class View():
                          column=1)
         limpar.pack(side="left")
         salvar.pack(side="left")
+        entrar.pack(side="left")
 
 
         #? Frame de Processos-----------------------------------------------------------------------------------
@@ -192,10 +202,14 @@ class View():
         
 
         #!__________________________Início_do_Programa__________________________
-        self.processos.tkraise()
+        self.levantar(self.login)
         self.root.mainloop()
     
     #!______________________________________________________________________________________________________________
+    
+    def levantar(self, tela) -> None:
+        tela.tkraise()
+        return None
     
     def limpar(self, user, senha) -> None:
         user.delete(0, ctk.END)
@@ -207,12 +221,15 @@ class View():
         senha = senhaEntry.get()
         self.controller.salvar({"user":user, "senha":senha})
         self.limpar(userEntry, senhaEntry)
-        return None
+        return 
+    
+    def entrar(self, userEntry, senhaEntry) :
+        user = userEntry.get()
+        senha = senhaEntry.get()
+        #? Fazer algo com o user
+        self.levantar(self.processos)
+    
     
     def sair(self, evento) -> None:
         self.controller.sair(evento)
         return None
-    
-
-if __name__ == "__main__":
-    View()
