@@ -1,4 +1,5 @@
 
+from sys import exit
 import pymongo
 
 class Model():
@@ -26,3 +27,6 @@ class Model():
         self.users.insert_one({"usuário":user,"senha":senha})
         return print({"user":user, "senha":senha})
     
+    def sair(self, evento) -> None:
+        exit()
+        return None

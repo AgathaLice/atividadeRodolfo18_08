@@ -1,7 +1,6 @@
 
 from controller import Controller
 
-import sys
 import customtkinter as ctk
 
 
@@ -13,6 +12,7 @@ class View():
         ctk.set_default_color_theme("dark-blue")
         
         self.root = ctk.CTk()
+        self.root.bind("<Escape>", self.sair)
         
         self.width = self.root.winfo_screenwidth()
         self.height = self.root.winfo_screenheight()
@@ -207,6 +207,10 @@ class View():
         senha = senhaEntry.get()
         self.controller.salvar({"user":user, "senha":senha})
         self.limpar(userEntry, senhaEntry)
+        return None
+    
+    def sair(self, evento) -> None:
+        self.controller.sair(evento)
         return None
     
 

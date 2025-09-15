@@ -11,3 +11,7 @@ class Controller():
     def salvar(self, userSenha) -> None:
         self.model.salvar(userSenha)
         return None
+    
+    def sair(self, evento) -> None:
+        self.model.sair(evento)
+        return None
