@@ -1,13 +1,14 @@
 
 class Processo():
     
-    def __init__(self, id, nome, cpu, user, memoria, estado):
+    def __init__(self, id, nome, cpu, user, memoria):
         self.id = id
         self.nome = nome
         self.cpu = cpu
         self.user = user
         self.memoria = memoria
-        self.estado = estado
+        self.estado = "INÍCIO"
+        self.comeco = True
     
     def getId(self) -> int | None:
         return self.id
@@ -49,4 +50,11 @@ class Processo():
     
     def setEstado(self, estado) -> None:
         self.estado = estado
+        return None
+
+    def getComeco(self):
+        return self.comeco
+    
+    def setComeco(self, comeco: bool):
+        self.comeco = comeco
         return None

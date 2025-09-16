@@ -441,11 +441,9 @@ class View():
         self.levantar(self.processos)
         
     
-    '''def timer(self):
-        self.secsNumLabel.config(text=str(00))
-        while True:
-            timeInfo = self.controller.timer()
-            #! Voltar dps'''
+    def timer(self):
+        timeInfo = self.controller.timer()
+
 
     
     
