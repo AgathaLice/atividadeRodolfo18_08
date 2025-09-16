@@ -114,17 +114,17 @@ class View():
         
         segundosFrame = ctk.CTkFrame(self.processos)
         segundosLabel = ctk.CTkLabel(segundosFrame,
-                                     text="SEGUNDOS -> ",
-                                     font=(fonte, 30))
-        secsNumLabel = ctk.CTkLabel(segundosFrame,
-                                    text="00",
-                                    font=(fonte, 30))
+                                     text="SEGUNDOS:  ",
+                                     font=(fonte, 40))
+        self.secsNumLabel = ctk.CTkLabel(segundosFrame,
+                                    text="--",
+                                    font=(fonte, 40))
         
         #* Programa
         programaFrame = ctk.CTkFrame(self.processos,
                                      border_width=1,
                                      border_color="white")
-        programaFrame.rowconfigure([0, 1, 2, 3, 4, 5], weight=1)
+        programaFrame.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], weight=1)
 
         programaLabel = ctk.CTkLabel(programaFrame,
                                      text="PROGRAMA",
@@ -144,86 +144,122 @@ class View():
         progs5 = ctk.CTkLabel(programaFrame,
                               text="-----",
                               font=(fonte, 20))
+        progs6 = ctk.CTkLabel(programaFrame,
+                              text="-----",
+                              font=(fonte, 20))
+        progs7 = ctk.CTkLabel(programaFrame,
+                              text="-----",
+                              font=(fonte, 20))
+        progs8 = ctk.CTkLabel(programaFrame,
+                              text="-----",
+                              font=(fonte, 20))
         #* CPU
         cpuFrame = ctk.CTkFrame(self.processos,
                                 border_width=1,
                                 border_color="white")
-        cpuFrame.rowconfigure([0, 1, 2, 3, 4, 5], weight=1)
+        cpuFrame.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], weight=1)
 
         cpuLabel = ctk.CTkLabel(cpuFrame,
                                 text="CPU",
                                 font=(fonte, 30))
         cpu1 = ctk.CTkLabel(cpuFrame,
                                text="-----",
-                               font=(fonte, 18))
+                               font=(fonte, 20))
         cpu2 = ctk.CTkLabel(cpuFrame,
                                text="-----",
-                               font=(fonte, 18))
+                               font=(fonte, 20))
         cpu3 = ctk.CTkLabel(cpuFrame,
                                text="-----",
-                               font=(fonte, 18))
+                               font=(fonte, 20))
         cpu4 = ctk.CTkLabel(cpuFrame,
                                text="-----",
-                               font=(fonte, 18))
+                               font=(fonte, 20))
         cpu5 = ctk.CTkLabel(cpuFrame,
                                text="-----",
-                               font=(fonte, 18))
+                               font=(fonte, 20))
+        cpu6 = ctk.CTkLabel(cpuFrame,
+                               text="-----",
+                               font=(fonte, 20))
+        cpu7 = ctk.CTkLabel(cpuFrame,
+                               text="-----",
+                               font=(fonte, 20))
+        cpu8 = ctk.CTkLabel(cpuFrame,
+                               text="-----",
+                               font=(fonte, 20))
         
         #* Usuário
         usuarioFrame = ctk.CTkFrame(self.processos,
                                     border_width=1,
                                     border_color="white")
-        usuarioFrame.rowconfigure([0, 1, 2, 3, 4, 5], weight=1)
+        usuarioFrame.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], weight=1)
 
         usuarioLabel = ctk.CTkLabel(usuarioFrame,
                                    text="USUÁRIO",
                                    font=(fonte, 30))
         user1 = ctk.CTkLabel(usuarioFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
         user2 = ctk.CTkLabel(usuarioFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
         user3 = ctk.CTkLabel(usuarioFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
         user4 = ctk.CTkLabel(usuarioFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
         user5 = ctk.CTkLabel(usuarioFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
+        user6 = ctk.CTkLabel(usuarioFrame,
+                             text="-----",
+                             font=(fonte, 20))
+        user7 = ctk.CTkLabel(usuarioFrame,
+                             text="-----",
+                             font=(fonte, 20))
+        user8 = ctk.CTkLabel(usuarioFrame,
+                             text="-----",
+                             font=(fonte, 20))
         
         #* End. Memória
         endMemoriaFrame = ctk.CTkFrame(self.processos,
                                        border_width=1,
                                        border_color="white")
-        endMemoriaFrame.rowconfigure([0, 1, 2, 3, 4, 5], weight=1)
+        endMemoriaFrame.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], weight=1)
 
         endMemoriaLabel = ctk.CTkLabel(endMemoriaFrame,
                                    text="END. MEMÓRIA",
                                    font=(fonte, 30))
         memr1 = ctk.CTkLabel(endMemoriaFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
         memr2 = ctk.CTkLabel(endMemoriaFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
         memr3 = ctk.CTkLabel(endMemoriaFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
         memr4 = ctk.CTkLabel(endMemoriaFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
         memr5 = ctk.CTkLabel(endMemoriaFrame,
                              text="-----",
-                             font=(fonte, 18))
+                             font=(fonte, 20))
+        memr6 = ctk.CTkLabel(endMemoriaFrame,
+                            text="-----",
+                             font=(fonte, 20))
+        memr7 = ctk.CTkLabel(endMemoriaFrame,
+                             text="-----",
+                             font=(fonte, 20))
+        memr8 = ctk.CTkLabel(endMemoriaFrame,
+                             text="-----",
+                             font=(fonte, 20))
         
         #* Estado
         estadoFrame = ctk.CTkFrame(self.processos,
                                    border_width=1,
                                    border_color="white")
-        estadoFrame.rowconfigure([0, 1, 2, 3, 4, 5], weight=1)
+        estadoFrame.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], weight=1)
 
         estadoLabel = ctk.CTkLabel(estadoFrame,
                                    text="ESTADO",
@@ -243,12 +279,22 @@ class View():
         estd5 = ctk.CTkLabel(estadoFrame,
                              text="-----",
                              font=(fonte, 20))
+        estd6 = ctk.CTkLabel(estadoFrame,
+                             text="-----",
+                             font=(fonte, 20))
+        estd7 = ctk.CTkLabel(estadoFrame,
+                             text="-----",
+                             font=(fonte, 20))
+        estd8 = ctk.CTkLabel(estadoFrame,
+                             text="-----",
+                             font=(fonte, 20))
+        
 
         segundosFrame.grid(row=0,
                            column=0,
                            sticky="nws")
         segundosLabel.pack(side="left")
-        secsNumLabel.pack(side="left")
+        self.secsNumLabel.pack(side="left", padx=10)
 
         programaFrame.grid(row=1,
                            column=0,
@@ -265,6 +311,12 @@ class View():
         progs4.grid(row=4,
                     column=0)
         progs5.grid(row=5,
+                    column=0)
+        progs6.grid(row=6,
+                    column=0)
+        progs7.grid(row=7,
+                    column=0)
+        progs8.grid(row=8,
                     column=0)
         
         cpuFrame.grid(row=1,
@@ -283,6 +335,12 @@ class View():
                   column=0)
         cpu5.grid(row=5,
                   column=0)
+        cpu6.grid(row=6,
+                    column=0)
+        cpu7.grid(row=7,
+                    column=0)
+        cpu8.grid(row=8,
+                    column=0)
         
         usuarioFrame.grid(row=1,
                           column=2,
@@ -300,6 +358,12 @@ class View():
                    column=0)
         user5.grid(row=5,
                    column=0)
+        user6.grid(row=6,
+                    column=0)
+        user7.grid(row=7,
+                    column=0)
+        user8.grid(row=8,
+                    column=0)
         
         endMemoriaFrame.grid(row=1,
                              column=3,
@@ -317,6 +381,12 @@ class View():
                    column=0)
         memr5.grid(row=5,
                    column=0)
+        memr6.grid(row=6,
+                    column=0)
+        memr7.grid(row=7,
+                    column=0)
+        memr8.grid(row=8,
+                    column=0)
         
         estadoFrame.grid(row=1,
                          column=4,
@@ -334,6 +404,12 @@ class View():
                    column=0)
         estd5.grid(row=5,
                    column=0)
+        estd6.grid(row=6,
+                    column=0)
+        estd7.grid(row=7,
+                    column=0)
+        estd8.grid(row=8,
+                    column=0)
         
 
         #!__________________________Início_do_Programa__________________________
@@ -356,18 +432,21 @@ class View():
         senha = senhaEntry.get()
         self.controller.salvar({"user":user, "senha":senha})
         self.limpar(userEntry, senhaEntry)
-        return 
+        return None
     
     def entrar(self, userEntry, senhaEntry) -> None:
         user = userEntry.get()
         senha = senhaEntry.get()
         #? Fazer algo com o user
         self.levantar(self.processos)
-        self.iniciarTimer()
+        
     
-    def iniciarTimer(self) -> None:
-        self.controller.iniciarTimer()
-        return None
+    '''def timer(self):
+        self.secsNumLabel.config(text=str(00))
+        while True:
+            timeInfo = self.controller.timer()
+            #! Voltar dps'''
+
     
     
     def sair(self, evento) -> None:

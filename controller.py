@@ -12,9 +12,9 @@ class Controller():
         self.model.salvar(userSenha)
         return None
     
-    def iniciarTimer(self):
-        self.model.iniciarTimer()
-    
+    '''def timer(self):
+        return self.model.timer()'''
+        
     
     def sair(self, evento) -> None:
         self.model.sair(evento)

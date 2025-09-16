@@ -2,11 +2,7 @@
 from sys import exit
 
 import pymongo
-
-from processos import Processo
-from multiprocessing import process
-
-import time as t
+from time import sleep
 
 class Model():
     
@@ -16,11 +12,12 @@ class Model():
         self.users = SisOpr["Users"]
         
         self.dados = {"nome": ["Excel", "Word", "Powerpoint", "Google Chrome", "Ibis Paint",
-                               "Firefox", "Github Desktop", "Explorador de Arquivos", 
+                               "Firefox", "Github Desktop", "Explorador de Arquivos",
                                "Configurações", "Prompt de Comando", "Gerenciador de  Tarefas"],
                       "user": ["Alice", "Jonas", "Roberta", "Admin", "Rodolfo"], #? self.getUsers(),
                       "memória": ["1", "2", "3", "4", "5"],
                       "estado": ["INÍCIO", "PRONTO", "EXECUÇÃO", "ESPERA", "TÉRMINO"]}
+        self.tempo = 0
     
     
     def salvar(self, userSenha) -> None:
@@ -41,15 +38,15 @@ class Model():
         self.users.insert_one({"usuário":user,"senha":senha})
         return print({"user":user, "senha":senha})
     
-    def iniciarTimer():
-        pass
-    
-    def timer(self):
-        tempo = 0
-        while True:
-            t.sleep(1)
-            #! Não vai funcionar assim, precisa desenhar na tela
-    
+    '''def timer(self):
+        sleep(1)
+        self.tempo += 1
+        if self.tempo % 5 == 0:
+            if self.quantidadeProcessos => 8:
+                self.killProcesso()
+            if self.quantidadeProcessos < 8:
+                self.criarProcesso()'''
+            
     
     
     def sair(self, evento) -> None:
